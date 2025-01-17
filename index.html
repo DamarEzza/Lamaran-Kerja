@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Surat Lamaran Kerja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Generator Surat Lamaran Kerja</h1>
+    </header>
+    <main>
+        <section id="form-section">
+            <h2>Data Diri</h2>
+            <form id="data-diri-form">
+                <label for="nama">Nama :</label>
+                <input type="text" id="nama" name="nama" required>
+                
+                <label for="ktp">Nomor KTP :</label>
+                <input type="text" id="ktp" name="ktp" required>
+                
+                <label for="tempat-lahir">Tempat Lahir :</label>
+                <input type="text" id="tempat-lahir" name="tempat-lahir" required>
+                
+                <label for="tanggal-lahir">Tanggal Lahir :</label>
+                <input type="date" id="tanggal-lahir" name="tanggal-lahir" required>
+                
+                <label for="agama">Agama :</label>
+                <select id="agama" name="agama" required>
+                    <option value="" disabled selected>Pilih Agama</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Protestan">Protestan</option>
+                    <option value="Katolik">Katolik</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Buddha">Buddha</option>
+                    <option value="Khonghucu">Khonghucu</option>
+                </select>
+                
+                <label for="telepon">Nomor Telepon:</label>
+                <input type="text" id="telepon" name="telepon" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                
+                <label for="company">Nama Perusahaan:</label>
+                <input type="text" id="company" name="company" required>
+                
+                <label for="posisi">Posisi yang Dilamar:</label>
+                <input type="text" id="posisi" name="posisi" required>
+                
+                <button type="submit">Lanjutkan</button>
+            </form>
+        </section>
+        
+        <section id="verification-section" class="hidden">
+            <h2>Verifikasi</h2>
+            <p>Masukkan kode berikut: <strong>BanSerep</strong></p>
+            <input type="text" id="verification-code" placeholder="Masukkan kode verifikasi" required>
+            <p>Subscribe YouTube kami: <a href="https://youtube.com/@rayselviana" target="_blank">Ray & Selpi Channel</a></p>
+            <button id="verify-button">Verifikasi</button>
+        </section>
+        
+        <section id="surat-section" class="hidden">
+            <h2>Surat Lamaran Anda</h2>
+            <div id="surat-lamaran" class="surat-container">
+                <div id="surat-content"></div>
+                <button id="copy-button">Salin Surat</button>
+                <button id="restart-button">Mulai Ulang</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="tahun"></span> CIKASNGU</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
